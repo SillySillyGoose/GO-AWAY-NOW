@@ -5,24 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hey!</title>
     <link rel="stylesheet" href="gw.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 </head>
 <script>
+    let words = ""
+    let o_f = true
 
+    function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+
+   async function fe(){
+        while (true) {
+            await sleep(0)
+            document.querySelector('#cool').textContent = words
+            if (o_f == true) {
+                await sleep(1000)
+                    words = "CLICK THE BUTTON N̶̢̢̨̧̨̢͓̱̲͔͍̖͙̭̠̜̰̼̖̩̖̣̺̠̝̺̰̬̗͎̜̻̬̗̞̟͇̙̝̥͔̦̠͎̥͕̻̣͓͇̠̹͎͂̈̃̽̐̎̽̂͋̏͌̈́͛̇̂͂̅̿͒̇͊̀͛̓̀͂͗̈́̊̌͆̆̉̓́̐̇̅͌͛̇́̉̆̋͗͒̐̚̕̕͜͜͝͝͝͠͝ͅͅO̸̧͍̠͓̘̤͖̹̹͎̟̣̝͎͉̘͎̙͎͂͆̍͐̀̍̑̈̏̄͑̈́͗̃̂̏̔͌́̓̀́̿̂͂̍͐̎͌͋̒̅̿̒̍̒̌̇͘͘͠W̸̳̖͉̣̜̪̘̦͎͋́̓̄̄͊̉̒̉̈̉͐̈͗̆̄͋̂͌̂͌̔̊̈́̇̇̆̊̃͂̀̓̈́̿̈́̈͗̈̾̆̆̆̈́̚͘̕͠͠"
+                    $("#bt2").prop("disabled", true)
+            }
+        }
+
+
+    }
 
     function click1(){
         document.querySelector('.mh12').hidden = false
         document.querySelector('.mh1').hidden = true
+        document.querySelector('#bt1').hidden = true
+        document.querySelector('#bt3').hidden = false
     }
     function click2(){}
+
+    function click3(){
+        document.querySelector("#cool").hidden = false
+        fe()
+        document.querySelector('#coal').hidden = true
+        document.querySelector("#bt3").hidden = true
+    }
 
 </script>
 <body>
     <h1 class="mh1">Hello! How are you doing today?</h1>
-    <h1 class="mh12" hidden>Į̶̢̗̪̜͎̺̠̫͝ ̸̡̯͈͕̺̆̃̌́̈́̃̈́S̸̙͇̝̦̩̯͉̔̋̎̿̐̆̾͒̎͑͊͆̀͘͝Ą̴͓̪̟͎̅́͋̾͊̏͌Ḯ̴̧̛̼̱͉͔͎̪̤̘̻̈͆͑̀͑͊̅̕D̵̢̛̥̣̞̦̳͔͓͇̻̥̄́͐̌̊̇̽͒͘͝͠ ̶̨͈͓̝̪͙̠̬̝̭͉̓̂̑͌͛̈́̾̎̈̌̒̅͜͝͠Ḩ̶̘̰̻̙͓͍̠̿̐̈́͐̿̿̐̌̇̾́͝ͅO̵̗͚͈̰͔̘̘̥͖̰̻̩̺̦̐̈́͒̾̑̄̊͌͝ͅẄ̵̡̧̮̰̥̣̩͎̱̦̝͖́̒͜ ̵̫͇̏͂̾͊̍̇̋̉̆̑̋̽̕͝͝Ạ̴̤̟̼̳͖̎͗̓̈́̑͐͐̅͌̊͊͗͘ͅṚ̶̡̦̣̚E̵̢̛͇̲̣̪̻͇̦͈͛͌̈́̍̐̄̈͐̈́̚̚̕͠ ̴̖̮͈̞͎͔͆͜ͅY̷̢̙̫̭͓͈͔̖̙̙͎͇̣̓͂ͅǪ̶̰̺̖̭̻̜̟͖͚͆͝Ü̶̫͉̹̳̞̪̭̤͓̦̱̜͍͍̚͠ ̵̰̟̥͍̬̲̖̰̠͉̹̱̓͂̀̉̀̒̍̓̓̅̿̕̕͜͜D̸̨̧̛͖̞͎͍̟̬̗̯̮̞̎̐̈̄͊̂̅̈́̂̌̎́̚͘ͅǪ̵̗̣̻̭̞̩̌̏̒͂̇̃I̵̦̠̘͝N̸̝̜̤͋͗̆͛̋̈́͋̒͝G̴̡̨͎̣̲̘͎͊̅̒̌͂͝?̵͔̱̗̦̏</h1>
+    <h1 class="mh12" id="coal" hidden>Į̶̢̗̪̜͎̺̠̫͝ ̸̡̯͈͕̺̆̃̌́̈́̃̈́S̸̙͇̝̦̩̯͉̔̋̎̿̐̆̾͒̎͑͊͆̀͘͝Ą̴͓̪̟͎̅́͋̾͊̏͌Ḯ̴̧̛̼̱͉͔͎̪̤̘̻̈͆͑̀͑͊̅̕D̵̢̛̥̣̞̦̳͔͓͇̻̥̄́͐̌̊̇̽͒͘͝͠ ̶̨͈͓̝̪͙̠̬̝̭͉̓̂̑͌͛̈́̾̎̈̌̒̅͜͝͠Ḩ̶̘̰̻̙͓͍̠̿̐̈́͐̿̿̐̌̇̾́͝ͅO̵̗͚͈̰͔̘̘̥͖̰̻̩̺̦̐̈́͒̾̑̄̊͌͝ͅẄ̵̡̧̮̰̥̣̩͎̱̦̝͖́̒͜ ̵̫͇̏͂̾͊̍̇̋̉̆̑̋̽̕͝͝Ạ̴̤̟̼̳͖̎͗̓̈́̑͐͐̅͌̊͊͗͘ͅṚ̶̡̦̣̚E̵̢̛͇̲̣̪̻͇̦͈͛͌̈́̍̐̄̈͐̈́̚̚̕͠ ̴̖̮͈̞͎͔͆͜ͅY̷̢̙̫̭͓͈͔̖̙̙͎͇̣̓͂ͅǪ̶̰̺̖̭̻̜̟͖͚͆͝Ü̶̫͉̹̳̞̪̭̤͓̦̱̜͍͍̚͠ ̵̰̟̥͍̬̲̖̰̠͉̹̱̓͂̀̉̀̒̍̓̓̅̿̕̕͜͜D̸̨̧̛͖̞͎͍̟̬̗̯̮̞̎̐̈̄͊̂̅̈́̂̌̎́̚͘ͅǪ̵̗̣̻̭̞̩̌̏̒͂̇̃I̵̦̠̘͝N̸̝̜̤͋͗̆͛̋̈́͋̒͝G̴̡̨͎̣̲̘͎͊̅̒̌͂͝?̵͔̱̗̦̏</h1>
 
+
+    <h1 class="mh12" hidden id="cool"></h1>
+
+    <h1 class="mh1" hidden>Oh really? Thats not good.</h1>
+    <h1 class="mh1" hidden>Do you know why that could be?</h1>
         
     
-    <button onclick="click1()" id="bt1">Great!</button><button onclick="click2()" id="bt2">Not the best.</button>
+    <button onclick="click1()" id="bt1">Great!</button><button hidden onclick="click3()" id="bt3">Great!</button><button onclick="click2()" disabled id="bt2">Not the best.</button>
 
 
 
