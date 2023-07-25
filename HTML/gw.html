@@ -10,7 +10,7 @@
 <script>
     let words = ""
     let o_f = true
-
+    let val = 0
     function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -24,7 +24,7 @@
             if (o_f == true) {
                 await sleep(1000)
                     words = "CLICK THE BUTTON N̶̢̢̨̧̨̢͓̱̲͔͍̖͙̭̠̜̰̼̖̩̖̣̺̠̝̺̰̬̗͎̜̻̬̗̞̟͇̙̝̥͔̦̠͎̥͕̻̣͓͇̠̹͎͂̈̃̽̐̎̽̂͋̏͌̈́͛̇̂͂̅̿͒̇͊̀͛̓̀͂͗̈́̊̌͆̆̉̓́̐̇̅͌͛̇́̉̆̋͗͒̐̚̕̕͜͜͝͝͝͠͝ͅͅO̸̧͍̠͓̘̤͖̹̹͎̟̣̝͎͉̘͎̙͎͂͆̍͐̀̍̑̈̏̄͑̈́͗̃̂̏̔͌́̓̀́̿̂͂̍͐̎͌͋̒̅̿̒̍̒̌̇͘͘͠W̸̳̖͉̣̜̪̘̦͎͋́̓̄̄͊̉̒̉̈̉͐̈͗̆̄͋̂͌̂͌̔̊̈́̇̇̆̊̃͂̀̓̈́̿̈́̈͗̈̾̆̆̆̈́̚͘̕͠͠"
-                    $("#bt2").prop("disabled", true)
+                    document.getElementById('bt2').disabled = false
             }
         }
 
@@ -37,13 +37,59 @@
         document.querySelector('#bt1').hidden = true
         document.querySelector('#bt3').hidden = false
     }
-    function click2(){}
+    async function click2(){
+        document.querySelector('.mh13').hidden = false
+        document.querySelector('#cool').hidden = true
+        document.querySelector('#bt2').hidden = true
+        await sleep(1000)
+        document.querySelector('.mh13').hidden = true
+        document.querySelector('.mh14').hidden = false
+        document.querySelector('#ba').hidden = false
+        document.querySelector('#be').hidden = false
+    }
 
     function click3(){
         document.querySelector("#cool").hidden = false
         fe()
         document.querySelector('#coal').hidden = true
         document.querySelector("#bt3").hidden = true
+    }
+
+    function NO(){
+        document.querySelector('.mh15').hidden = false
+        document.querySelector('.mh14').hidden = true
+        document.querySelector('#ba').hidden = true
+        document.querySelector('#be').hidden = true
+        document.querySelector('#aa').hidden = false
+        document.querySelector('#ae').hidden = false
+    }
+
+    async function main(){
+        document.querySelector('.mh16').hidden = true
+            document.querySelector('.mh17').hidden = false
+            await sleep(2000)
+            document.querySelector('.mh17').hidden = true
+            document.querySelector('#ae').hidden = true
+            document.querySelector('#aa').hidden = true
+            await sleep(5000)
+            document.querySelector('img').hidden = false
+
+    }
+
+    async function NO2(){
+
+        if (val == 2) {
+            main()
+        }
+
+        document.querySelector('.mh15').hidden = true
+        val += 1
+        document.querySelector('.mh16').hidden = false
+
+        if (val == 2) {
+            document.querySelector('.mh16').hidden = true
+        }
+        
     }
 
 </script>
@@ -54,11 +100,16 @@
 
     <h1 class="mh12" hidden id="cool"></h1>
 
-    <h1 class="mh1" hidden>Oh really? Thats not good.</h1>
-    <h1 class="mh1" hidden>Do you know why that could be?</h1>
-        
+    <h1 class="mh13" hidden>Oh really? Thats not good.</h1>
+    <h1 class="mh14" hidden>Do you know why that could be?</h1>
+    <h1 class="mh15" hidden>Answer the question.</h1>
+    <h1 class="mh16" hidden>STOP</h1>
+    <h1 class="mh17" hidden>DIE</h1>
     
-    <button onclick="click1()" id="bt1">Great!</button><button hidden onclick="click3()" id="bt3">Great!</button><button onclick="click2()" disabled id="bt2">Not the best.</button>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfomMPK6usbOzzJgZmeT5hu2Ko6YTG5EaTOw&usqp=CAU" alt="Spooky" hidden>
+
+    <button onclick="click1()" id="bt1">Great!</button><button hidden id="ba" onclick="NO()">No</button><button id="be" onclick="NO()" hidden>No</button><button hidden onclick="click3()" id="bt3">Great!</button><button onclick="click2()" disabled id="bt2">Not the best.</button>
+    <button hidden id="aa" onclick="NO2()">No</button><button hidden id="ae" onclick="NO2()">No</button>
 
 
 

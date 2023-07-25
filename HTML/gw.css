@@ -1,10 +1,27 @@
-@font-face{
-    font-family: "CookieMonster";
-    src: url('./cookiemonster-gv11-webfont.woff');
-}
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 .mh1{
-    font-family: 'CookieMonster';
+    font-family: 'Indie Flower';
+    text-align: center;
+}
+.mh13{
+    font-family: 'Indie Flower';
+    text-align: center;
+}
+.mh14{
+    font-family: 'Indie Flower';
+    text-align: center;
+}
+.mh15{
+    font-family: 'Indie Flower';
+    text-align: center;
+}
+.mh16{
+    font-family: 'Indie Flower';
+    text-align: center;
+}
+.mh17{
+    font-family: 'Indie Flower';
     text-align: center;
 }
 
